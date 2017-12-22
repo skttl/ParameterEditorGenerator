@@ -1,0 +1,62 @@
+﻿<div class="skttl-parametereditorgenerator" ng-controller="skttl.ParameterEditorGenerator.Controller as vm">
+
+	<div class="umb-dialog-body" ng-if="vm.mode !== undefined">
+		<umb-load-indicator ng-if="vm.loading">
+		</umb-load-indicator>
+
+		<div ng-cloak ng-if="!vm.loading && vm.mode == 'no-datatypeid'">
+			<umb-pane>
+				<b><localize key="skttlParameterEditorGenerator_noDataTypeId">No datatype id</localize></b><br>
+				<localize key="skttlParameterEditorGenerator_noDataTypeIdDescription">Couldn't find the current data type id.</localize>
+			</umb-pane>
+		</div>
+
+		<div ng-cloak ng-if="!vm.loading && vm.mode == 'error-saving-packagemanifest'">
+			<umb-pane>
+				<b><localize key="skttlParameterEditorGenerator_errorSavingPackageManifest">Error saving package.manifest</localize></b><br>
+				<localize key="skttlParameterEditorGenerator_errorSavingPackageManifestDescription">Couldn't save your package.manifest. Could be a permission error. Make sure you have permission to write to /App_Plugins.</localize>
+			</umb-pane>
+		</div>
+
+		<div ng-cloak ng-if="!vm.loading && vm.mode == 'successfully-saved-packagemanifest'">
+			<umb-pane>
+				<h5><localize key="skttlParameterEditorGenerator_successfullySavedPackageManifest">Successfully package.manifest</localize></h5>
+				<p>
+					<localize key="skttlParameterEditorGenerator_successfullySavedPackageManifestDescription">Hooray, you now have a Macro Parameter Editor based on this data type!</localize>
+				</p>
+
+				<div ng-if="!vm.debug" class="well">
+					<h5><localize key="skttlParameterEditorGenerator_notInDebugMode">You are not running Umbraco in debug mode</localize></h5>
+					<p>
+						<localize key="skttlParameterEditorGenerator_notInDebugModeDescription">Because of that, you need to recycle your app pool before Umbraco picks up your new parameter editor.</localize>
+					</p>
+					<button type="button" class="btn btn-warning" ng-click="vm.restart()"><localize key="skttlParameterEditorGenerator_restartAppPoolNow">Recycle App Pool now</localize></button>
+				</div>
+			</umb-pane>
+		</div>
+
+		<div ng-cloak class="pegedit" ng-if="!vm.loading && vm.mode == 'save-packagemanifest'">
+			<textarea ng-model="vm.result.PackageManifest"></textarea>
+
+			<label for="peg__folder">
+				<localize key="skttlParameterEditorGenerator_folderName">Folder to save package.manifest</localize>
+			</label>
+			<input type="text" ng-model="vm.result.FolderName" ng-keyup="vm.checkFolderExists()">
+
+			<div ng-if="vm.result.Exists" class="alert-danger"><localize key="skttlParameterEditorGenerator_folderExists">Folder already exists, and will be overwritten when saving.</localize></div>
+		</div>
+	</div>
+
+	<div class="umb-dialog-footer">
+		<button ng-if="vm.mode == 'save-packagemanifest'" type="button" class="btn btn-link ng-scope" ng-click="nav.hideDialog()">
+			<localize key="general_cancel">Cancel</localize>
+		</button>
+		<button ng-if="vm.mode == 'save-packagemanifest'" type="submit" class="btn btn-primary" ng-click="vm.savePackageManifest()" ng-disabled="vm.loading">
+			<localize key="skttlParameterEditorGenerator_save">Save package.manifest</localize>
+		</button>
+		<button ng-if="vm.mode == 'successfully-saved-packagemanifest' || vm.mode == 'no-datatypeid' || vm.mode == 'error-saving-packagemanifest'" type="submit" class="btn btn-primary" ng-click="nav.hideDialog()">
+			<localize key="general_close">Close</localize>
+		</button>
+	</div>
+
+</div>

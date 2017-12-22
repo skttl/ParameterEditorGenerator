@@ -1,0 +1,4 @@
+﻿{
+	"javascript": [ "~/App_Plugins/skttl.ParameterEditorGenerator/controller.js" ],
+	"css": [ "~/App_Plugins/skttl.ParameterEditorGenerator/styles.min.css" ]
+}

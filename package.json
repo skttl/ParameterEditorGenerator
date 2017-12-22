@@ -1,0 +1,21 @@
+{
+    "name": "skttl.ParameterEditorGenerator",
+    "url": "https://github.com/skttl/skttl.ParameterEditorGenerator/",
+    "license": {
+        "name": "MIT",
+        "url": "https://github.com/skttl/skttl.ParameterEditorGenerator/blob/master/LICENSE.md"
+    },
+    "author": {
+        "name": "Søren Kottal",
+        "url": "http://skttl.dk/"
+    },
+    "readme": "Parameter Editor Generator is a package that generates macro parameter editors from your Umbraco data types.",
+    "devDependencies": {
+        "grunt": "~0.4.5",
+        "grunt-contrib-copy": "~0.4.1",
+        "grunt-nuget": "0.1.6",
+        "grunt-zip": "~0.17.0",
+        "grunt-umbraco-package": "1.0.0",
+        "grunt-contrib-clean": "^0.7.0"
+    }
+}

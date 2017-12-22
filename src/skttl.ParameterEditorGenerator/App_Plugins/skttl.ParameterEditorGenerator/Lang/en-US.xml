@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<language alias="en" intName="English (US)" localName="English (US)" lcid="" culture="en-US">
+	<creator>
+		<name>Søren Kottal</name>
+	</creator>
+
+	<area alias="skttlParameterEditorGenerator">
+		<key alias="generatePackageManifest">Generate Parameter Editor</key>
+
+		<key alias="noDataTypeId">No datatype found</key>
+		<key alias="noDataTypeIdDescription">Couldn't find the current data type id.</key>
+
+		<key alias="errorSavingPackageManifest">Error saving package.manifest</key>
+		<key alias="errorSavingPackageManifestDescription">Couldn't save your package.manifest. This could be a permission related error. Make sure you have permission to write to /App_Plugins.</key>
+
+		<key alias="successfullySavedPackageManifest">Saved package.manifest</key>
+		<key alias="successfullySavedPackageManifestDescription">Hooray, you now have a Macro Parameter Editor based on this data type!</key>
+
+		<key alias="notInDebugMode">You are not running Umbraco in debug mode</key>
+		<key alias="notInDebugModeDescription">Because of that, you need to restart Umbraco before it picks up your new parameter editor.</key>
+		<key alias="restartAppPoolNow">Restart Umbraco now</key>
+
+		<key alias="folderName">Folder to save package.manifest in</key>
+		<key alias="folderExists">Folder already exists, and will be overwritten when saving.</key>
+
+		<key alias="save">Save package.manifest</key>
+
+
+
+	</area>
+</language>
