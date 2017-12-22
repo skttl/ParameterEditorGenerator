@@ -25,3 +25,7 @@ Grab a ZIP file of the latest release; unzip and move the contents to the root d
 
 
 ## Screenshots
+![Screenshot1](https://github.com/skttl/ParameterEditorGenerator/blob/master/assets/1.png?raw=true)
+![Screenshot2(https://github.com/skttl/ParameterEditorGenerator/blob/master/assets/2.png?raw=true)
+![Screenshot3(https://github.com/skttl/ParameterEditorGenerator/blob/master/assets/3.png?raw=true)
+![Screenshot4(https://github.com/skttl/ParameterEditorGenerator/blob/master/assets/4.png?raw=true)
